@@ -1,3 +1,10 @@
+
 img{
     height:200px;
+}
+.user{
+    background-color: #ff6666;
+}
+.computer{
+    background-color: #ff9966;
 }

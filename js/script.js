@@ -15,6 +15,13 @@
         // Clear the input box for the next choice
 
 // *************************** YOUR CODE BELOW *******************************
+$(document).ready(function(){
+        var userChoice='';
+        var computerChoice='';
+        var winner='';
+        var choices=["rock","paper", "scissors"]
+});
+
 //******************TEST EARLY AND OFTEN USING console.log() ******************
 //****************** SERIOUSLY TEST USING console.log()!!! ******************
 
