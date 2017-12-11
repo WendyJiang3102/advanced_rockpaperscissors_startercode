@@ -1,10 +1,14 @@
+#rockpaperscissor {
+    height: 150px;
+    margin: 20px;
+}
 
-img{
-    height:200px;
-}
-.user{
+.user {
     background-color: #ff6666;
+    height: 200px;
 }
-.computer{
+
+.computer {
     background-color: #ff9966;
+    height: 200px;
 }

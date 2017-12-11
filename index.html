@@ -3,7 +3,7 @@
 
 <head>
   <title>RPS Game</title>
-  
+
   <!-- Your CSS  -->
   <link href="css/style.css" rel="stylesheet">
 
@@ -21,19 +21,10 @@
         5. Add divs to record User Choice and Computer Choice.
         6. Add a div to record the Winner.
      -->
-  <div class="container row text-center">
-    <header class="col-md-12 col-md-6">
-      <title>Rock Paper Scissors</title>
-    </header>
-  </div>
-   
-  <div class="row">
-    <img src="http://static1.squarespace.com/static/595543f6b11be1695b0fdb29/t/59555414cd0f68572370bb64/1498764324553/DFP-RockPaperScissors-Black.png?format=1000w"> 
-  </div>
-   
+
   <!--rules-->
-  
-  <div class="row">
+
+  <div class="row text-center">
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Rules</button>
     <div class="modal fade">
       <div class="modal-dialog" role="document">
@@ -42,7 +33,7 @@
             <h5 class="modal-title">rules</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
           </div>
-          
+
           <div class="modal-body">
             <p>
               <ol>
@@ -53,40 +44,57 @@
               </ol>
             </p>
           </div>
-          
+
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           </div>
-          
+
         </div>
       </div>
     </div>
-  </div>  
-  
-  <!--end of rules-->
-  <div class=row>
-    
-    <div class="col-lg-6 user">
-      <input placeholder="choose rock, paper, or scissor">
-      <button id="userChoice">Choose</button>
-    </div>
-  
-    <div class="col-lg-6 computer">
-    
-    </div>
-    
   </div>
- 
-  
+
+  <!--end of rules-->
+  <div>
+    <div class="container row text-center">
+      <header class="col-md-12 col-md-6">
+        <title>Rock Paper Scissors</title>
+      </header>
+    </div>
+
+    <div class="container row">
+      <img class="col-lg-12 col-md-6" id="rockpaperscissor" src="http://static1.squarespace.com/static/595543f6b11be1695b0fdb29/t/59555414cd0f68572370bb64/1498764324553/DFP-RockPaperScissors-Black.png?format=1000w">
+    </div>
+
+    <div class=row>
+
+      <div class="col-lg-6 user text-center">
+        
+        <h1>User Choice</h1>
+        <input placeholder="choose rock, paper, or scissor">
+        <button class="btn-primary" id="userChoice">Choose</button>
+        <h5 id="uc"></h5>
+      </div>
+
+      <div class="col-lg-6 computer">
+        <h1>Computer Choice</h1>
+        <h5 id="pc"> </h5>
+      </div>
+
+    </div>
+  </div>
+
+
+
   <!-- Jquery Script -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    
+
   <!--Bootstrap Javascript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    
+
   <!-- Your Javascript -->
   <script src="js/script.js"></script>
-  
+
 </body>
 
 </html>
