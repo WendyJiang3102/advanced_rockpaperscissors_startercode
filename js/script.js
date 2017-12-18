@@ -16,75 +16,96 @@
 
 // *************************** YOUR CODE BELOW *******************************
 $(document).ready(function() {
+        
+        $("#input").keyup(function(event){
+                if(event.keyCode ===13){
+                        $("#submit").click();
+                }
+        });
 
-$("#userChoice").click(function() {
+        $("#submit").click(function() {
 
-                var userChoice = $("input").val().toLowerCase();
+                var userChoice = $("#input").val().toLowerCase();
 
                 var choices = ["rock", "paper", "scissors"];
 
                 if (userChoice === choices[0]) {
 
-                        $("#uc").html('<img src="images/rock.png">');
-                        $("#uc").append("rock");
+                        $("#userChoice").html("<img src='images/rock.png'>");
+
+                }else if (userChoice === choices[1]) {
+
+                        $("#userChoice").html("<img src='images/paper.png'>");
+
+                }else if (userChoice === choices[2]){
+
+                        $("#userChoice").html("<img src='images/scissors.png'>");
+                
+                }else {
+
+                        $("#userChoice").append("Not valid!");
 
                 }
-                else if (userChoice === choices[1]) {
 
-                        $("#uc").html('<img src="images/paper.png">');
+                var computerChoice = [ "<img src='images/rock.png'>","<img src='images/paper.png'>", "<img src='images/scissors.png'>"];
+
+                if (choices.includes(userChoice)) {
+
+                var x = Math.ceil(Math.random() * 12);
+
+                if (x <= 4) {
+
+                        $("#computerChoice").html(computerChoice[0]);
+
+                }else if (x <= 8) {
+
+                        $("#computerChoice").html(computerChoice[1]);
+
+                }else if (x <= 12) {
+
+                        $("#computerChoice").html(computerChoice[2]);
+                
+                }else {
+
+                        $("#computerChoice").html("Not Valid!");
 
                 }
-                else if (userChoice === choices[2])
-
-                        $("#uc").html('<img src="images/scissors.png">');
-
+        
+        
+        var winner = ["You win","You lose","Tie"]
+        
+        if(userChoice === choices[0])
+                if (x <= 4) {
+                        $("#result").html(winner[2]);
+                }else if (x <= 8) {
+                        $("#result").html(winner[1]);
+                }else if (x <= 12) {
+                        $("#result").html(winner[0]);
+                }
+        }else if(userChoice === Choices[1])
+                if (x <= 4) {
+                        $("#result").html(winner[0]);
+                }else if (x <= 8) {
+                        $("#result").html(winner[2]);
+                }else if (x <= 12) {
+                        $("#result").html(winner[1]);
+                
+        }else if(userChoice === Choices[2]){
+                if (x <= 4) {
+                        $("#result").html(winner[1]);
+                }else if (x <= 8) {
+                        $("#result").html(winner[0]);
+                }else if (x <= 12) {
+                        $("#result").html(winner[2]);
+                }
         }
-        else {
-
-                $("#uc").html("Not valid!");
-
-        }
-
-        var computerChoice = [
-
-                '<img src="images/paper.png">'
-
-                '<img src="images/rock.png">'
-
-                '<img src="images/scissors.png">'
-        ];
-
-        if (choices.includes(userChoice)) {
-                var x = Math.ceil(Math.random() * 3);
-
-                if (x <= 1) {
-                        $("#pc").html(computerChoice[0]);
-                }
-                else if (x <= 2) {
-                        $("#pc").html(computerChoice[1]);
-                }
-                else if (x <= 3) {
-                        $("#pc").html(computerChoice[2]);
-                }
-                else
-                        $("#pc").html("Not Valid!");
-}
-
-
-var winner = ["you win", "computer wins", "tie"];
-
-
-
-
+         $("input").val("");
+                
+        });
 });
 
 
-});
 
-$('#myModal').on('shown.bs.modal', function() {
-$('#myInput').trigger('focus')
-})
-});
 
 //******************TEST EARLY AND OFTEN USING console.log() ******************
 //****************** SERIOUSLY TEST USING console.log()!!! ******************
