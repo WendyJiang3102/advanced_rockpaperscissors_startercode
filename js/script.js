@@ -27,7 +27,7 @@ $(document).ready(function() {
 
                 var userChoice = $("#input").val().toLowerCase();
 
-                var choices = ["rock", "paper", "scissors"];
+                var choices = ["rock", "paper", "scissor"];
 
                 if (userChoice === choices[0]) {
 
